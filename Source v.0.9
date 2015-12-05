@@ -20,6 +20,7 @@ void registration();
 void login();
 void createMonster();
 void arena();
+void Check();
 void adminBuild();
 void playerBuild();
 
@@ -399,11 +400,11 @@ void arena()
 					cout << monster << " has hit you for " << (mdam + number) << " damage!" << endl;
 					cout << "You have " << newPlayerHP << " HP remaining." << endl << endl;
 
-					goto Check;
+					Check();
 				}
 				else
 					cout << monster << " missed!" << endl << endl;
-				goto Check;
+				Check();
 
 			}
 			else
@@ -415,11 +416,11 @@ void arena()
 				cout << monster << " has hit you for " << (mdam + number) << " damage!" << endl;
 				cout << "You have" << newPlayerHP << " HP remaining." << endl << endl;
 
-				goto Check;
+				Check();
 			}
 			else
 				cout << monster << " missed!" << endl << endl;
-			goto Check;
+			Check();
 			break;
 		}
 		//  If the user picks fireball
@@ -442,11 +443,11 @@ void arena()
 					cout << monster << " has hit you for " << (mdam + number) << " damage!" << endl;
 					cout << "You have " << newPlayerHP << " HP remaining." << endl << endl;
 
-					goto Check;
+					Check();
 				}
 				else
 					cout << monster << " missed!" << endl << endl;
-				goto Check;
+				Check();
 
 			}
 			else
@@ -458,11 +459,11 @@ void arena()
 				cout << monster << " has hit you for " << (mdam + number) << " damage!" << endl;
 				cout << "You have" << newPlayerHP << " HP remaining." << endl << endl;
 
-				goto Check;
+				Check();
 			}
 			else
 				cout << monster << " missed!" << endl << endl;
-			goto Check;
+			Check();
 			break;
 		}
 		//  Cmon man..
@@ -471,7 +472,8 @@ void arena()
 			goto Fight;
 		}
 
-	Check:
+//checking phase - LEL
+void Check()
 		{
 			time_t tim;   // get time now
 			time(&tim);
